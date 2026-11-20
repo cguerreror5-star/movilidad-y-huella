@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Movilidad sostenible en Bogotá</title>
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<header>
+  <h1>Comparador digital de huella de carbono y tiempos de viaje en Bogotá</h1>
+  <p>Propósito: ayudar a las personas a comparar cuánto tiempo gastan y cuánto CO₂ emiten según cómo se mueven, para elegir formas de transporte más sostenibles.</p>
+</header>
+<main>
+<section id="entorno">
+  <h2>1. El entorno y el problema</h2>
+  <p>Bogotá tiene más de 7,8 millones de habitantes y en Bogotá y su región se hacen más de 14,6 millones de viajes al día. El aumento de automóviles y motocicletas produce congestión, contaminación y viajes largos (Observatorio de Movilidad de Bogotá, 2023).</p>
+</section>
+<section id="historia">
+  <h2>2. Comparación histórica</h2>
+  <div class="tarjetas">
+    <article><h3>Local</h3><p>1995: Encuesta Origen-Destino. 1998: Pico y Placa. 2000: TransMilenio. 2006: inventario de emisiones. 2020-2023: cambios pospandemia.</p></article>
+    <article><h3>Regional</h3><p>Medellín, Cali y Barranquilla crearon sistemas masivos siguiendo el modelo de TransMilenio (Espinosa et al., 2018).</p></article>
+    <article><h3>Mundial</h3><p>Acuerdo de París (2015) y apoyo a la bicicleta, la caminata y las Zonas 30.</p></article>
+  </div>
+</section>
+<section id="habitabilidad">
+  <h2>3. Habitabilidad: ventajas y dificultades</h2>
+  <div class="tarjetas">
+    <article><h3>Ventajas</h3><ul><li>El 69,69 % de los viajes se hace en modos sostenibles.</li><li>Red amplia de ciclorrutas.</li></ul></article>
+    <article><h3>Dificultades</h3><ul><li>El viaje promedio dura 48 min; en transporte público, 79 min.</li><li>Contaminación del aire por fuentes móviles.</li><li>Más tiempo de viaje en estratos 1 y 2.</li></ul></article>
+  </div>
+</section>
+<section id="solucion">
+  <h2>4. La solución</h2>
+  <p>La herramienta recibe el modo de transporte, la distancia en un sentido y los viajes por semana. Calcula el tiempo semanal y las emisiones de CO₂ de los cinco modos y muestra cuánto CO₂ se evita frente al automóvil.</p>
+</section>
+<section id="herramienta">
+  <h2>5. Herramienta interactiva</h2>
+  <div class="formulario">
+    <label>Modo de transporte
+      <select id="modo">
+        <option value="auto">Automóvil a gasolina</option>
+        <option value="moto">Motocicleta</option>
+        <option value="publico">Transporte público (TransMilenio/SITP)</option>
+        <option value="bici">Bicicleta</option>
+        <option value="caminata">Caminata</option>
+      </select>
+    </label>
+    <label>Distancia en un sentido (km)
+      <input type="number" id="distancia" step="0.01" placeholder="Ej.: 12">
+    </label>
+    <label>Viajes por semana
+      <input type="number" id="viajes" step="1" placeholder="Ej.: 10">
+    </label>
+    <button id="calcular" type="button">Calcular</button>
+  </div>
+  <p id="mensaje" role="alert"></p>
+  <div id="resultados"></div>
+</section>
+<section id="interpretacion">
+  <h2>6. Cómo interpretar los resultados</h2>
+  <ul>
+    <li>Tiempo semanal = distancia × viajes ÷ velocidad. Emisión = distancia × viajes × factor de emisión ÷ 1000.</li>
+    <li>Si el tiempo semanal supera 3,3 horas (200 minutos), puede afectar el tiempo de estudio y el rendimiento académico (Gómez Osorio y Raffo López, 2025).</li>
+    <li>Recomendación: para distancias cortas, use bicicleta o caminata; para distancias largas, prefiera el transporte público.</li>
+    <li>Límites: son estimaciones con velocidades y factores promedio (automóvil 280 g/km, motocicleta 100 g/km, transporte público 45 g/km, bicicleta y caminata 0 g/km). No son mediciones reales ni consideran la congestión.</li>
+  </ul>
+</section>
+<section id="equipo">
+  <h2>7. Integrantes y fuentes</h2>
+  <p><strong>Integrantes:</strong> Estudiante 1, Estudiante 2, Estudiante 3. Pensamiento Computacional y Tecnologías Digitales, Grupo N.° 1.</p>
+  <p><strong>Fuentes:</strong> Observatorio de Movilidad de Bogotá (2023); Espinosa et al. (2018); Gómez Osorio y Raffo López (2025); Giraldo y Behrentz (2006); Rojas (2007).</p>
+  <p><strong>Uso de IA:</strong> se usó IA como apoyo para escribir el código base; el equipo lo revisó y puede explicarlo y modificarlo.</p>
+</section>
+</main>
+<script src="logica.js"></script>
+</body>
+</html>
